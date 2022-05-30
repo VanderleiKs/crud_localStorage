@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/buttons.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <title>Cadastro de Clientes</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navigation">
+        <h1>Cadastro de Clientes</h1>
+      </nav>
+    </header>
+    <main class="containerMain">
+      <div class="containerCad">
+          <button class="btnBlue" onclick="modalOn()">Cadastrar Cliente</button>
+          <table id="tbClient">
+              <thead>
+                  <th>Nome</th>
+                  <th>E-mail</th>
+                  <th>Celular</th>
+                  <th>Cidade</th>
+                  <th>Ação</th>
+              </thead>
+              <tbody>
+                  
+              </tbody>
+          </table>
+          <div id="containerModal" class="containerModal">
+            <div id="modal" class="modal">
+              <div class="header">
+                  <h2>Novo Cliente</h2>
+                  <span onclick="modalOff()">&#10006</span>
+              </div>
+              <div class="content">
+                  <form action="submit" id="formClient">
+                      <input type="text" id="formName" placeholder="Digite o nome" required>
+                      <input type="email" id="formEmail" placeholder="Digite o e-mail" required>
+                      <input type="text" id="formCelular" placeholder="Digite o celular" required>
+                      <input type="text" id="formCidade" placeholder="Digite a cidade" required>
+                  </form>
+              </div>
+              <footer>
+                <button class="btnRed" onclick="modalOff()">Cancelar</button>
+                <button id="" class="btnGreen" onclick="saveClient(id)">Salvar</button>
+              </footer>
+            </div>
+          </div>
+      </div>
+    </main>
+    <footer><span>Vanderleiks</span></footer>
+    <script src="./main.js"></script>
+  </body>
+</html>
